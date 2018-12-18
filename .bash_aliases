@@ -54,6 +54,7 @@ alias flush_dns="sudo killall -HUP mDNSResponder"
 alias chdirs="find . -type d -exec chmod 755 {} \;"
 alias chfiles="find . -type f -exec chmod 644 {} \;"
 alias sassw="sass --watch ./:./"
+alias dowww="wget -r -np -k"
 
 # Common files for editing
 alias edit_hosts='subl /etc/hosts'
