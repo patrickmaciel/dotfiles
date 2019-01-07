@@ -1,4 +1,4 @@
-alias ll="ls -liah"
+alias ll="ls -l"
 alias vi="nvim"
 alias vim="nvim"
 alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
@@ -25,8 +25,10 @@ alias gfl='git flow'
 alias ghostw='nodemon current/index.js --watch content/themes/'
 alias gsub='git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`'
 alias gls='git log --stat'
+alias glall="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias lia='ls -liah'
 alias www="cd ~/www"
+alias wwo="cd ~/workspace"
 alias paux='ps aux | grep'
 alias ki='sudo kill -9'
 alias comdo="composer dump-autoload -o"
@@ -91,3 +93,14 @@ alias kill_chrome="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exte
 alias shrug="printf '¯\_(ツ)_/¯' | pbcopy"
 alias flipt="printf '(╯°□°)╯︵ ┻━┻' | pbcopy"
 alias fight="printf '(ง'̀-'́)ง' | pbcopy"
+
+# docker
+alias dcstopp="docker stop $(docker ps -a -q)"
+alias dcstop="docker container stop"
+alias dcls="docker container ls"
+alias dcrmf="docker rm $(docker ps -a -q)"
+alias dcrmi="docker rmi $(docker images -q)"
+alias dcps="docker ps"
+alias dcpull="docker pull"
+alias dcbuild="docker build"
+alias dcrun="docker run"
