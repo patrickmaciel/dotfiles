@@ -1,10 +1,12 @@
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
 alias ll="ls -l"
-alias vi="nvim"
-alias vim="nvim"
+#alias vi="nvim"
+#alias vim="nvim"
 alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias nvinit="nvim ~/.config/nvim/init.vim"
-alias valias="nvim ~/.bash_aliases"
-alias balias="nvim ~/.bash_profile"
+alias valias="vim ~/.bash_aliases"
+alias balias="vim ~/.bash_profile"
 alias zalias="source ~/.bash_profile"
 alias gst="git status"
 alias gcm="git commit -m"
@@ -34,7 +36,7 @@ alias ki='sudo kill -9'
 alias comdo="composer dump-autoload -o"
 alias comda="composer dump-autoload"
 alias comup='composer update -vvv'
-alias vhosts="nvim /etc/hosts"
+alias vhosts="vim /etc/hosts"
 alias tinker="php artisan tinker"
 alias art="php artisan"
 alias artm="php artisan migrate"
@@ -43,13 +45,20 @@ alias artmr="php artisan migrate:rollback"
 alias aptu="sudo apt-get update && sudo apt-get upgrade"
 
 # Services
+alias ngsr='sudo nginx -s stop && sudo nginx'
 alias ngdir="cd /usr/local/etc/nginx/"
 alias phpres="sudo brew services restart php@7.2"
 alias ngres="sudo brew services restart nginx"
 alias ngstart="sudo brew services start nginx"
 alias ngstop="sudo brew services stop nginx"
+alias pg_start="pg_ctl -D /usr/local/var/postgres start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop"
+alias my_start="brew services start mysql@5.7"
+alias my_stop="brew services stop mysql@5.7"
+
 
 # Helpful
+alias ccc='pwd | pbcopy'
 alias reload="exec ${SHELL} -l"
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias flush_dns="sudo killall -HUP mDNSResponder"
@@ -63,6 +72,9 @@ alias edit_hosts='subl /etc/hosts'
 alias edit_httpd='subl /usr/local/etc/httpd/httpd.conf'
 alias edit_vhosts='subl /usr/local/etc/httpd/extra/httpd-vhosts.conf'
 alias edit_php='subl /usr/local/etc/php/7.2/php.ini'
+alias edit_nginx='subl /usr/local/etc/nginx/nginx.conf'
+alias log_apache='tail -f /usr/local/var/log/httpd/error_log'
+alias log_nginx='tail -f /usr/local/var/log/nginx/error.log'
 
 # System
 alias update='mas upgrade; brew cleanup; brew upgrade; brew update; brew cask cleanup; brew cu -a -y; composer global update; npm update -g; npm install npm@latest -g'
@@ -95,12 +107,17 @@ alias flipt="printf '(╯°□°)╯︵ ┻━┻' | pbcopy"
 alias fight="printf '(ง'̀-'́)ง' | pbcopy"
 
 # docker
-alias dcstopp="docker stop $(docker ps -a -q)"
+alias dcup="docker-compose up"
+# alias dcstopp="docker stop $(docker ps -a -q)"
 alias dcstop="docker container stop"
-alias dcls="docker container ls"
-alias dcrmf="docker rm $(docker ps -a -q)"
-alias dcrmi="docker rmi $(docker images -q)"
+ alias dcls="docker container ls"
+# alias dcrmf="docker rm $(docker ps -a -q)"
+# alias dcrmi="docker rmi $(docker images -q)"
 alias dcps="docker ps"
 alias dcpull="docker pull"
 alias dcbuild="docker build"
 alias dcrun="docker run"
+
+# emulators
+alias simios='xcrun simctl launch EB07D5A1-495B-48F4-BBF7-AF238588D59A'
+alias simapp='open -a Simulator.app'
