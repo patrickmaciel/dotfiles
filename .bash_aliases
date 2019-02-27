@@ -24,6 +24,7 @@ alias gkk='git checkout --'
 alias gck='git checkout'
 alias gcm='git commit -m'
 alias gfl='git flow'
+alias gfresh='gc --prune=now && git remote prune origin'
 alias ghostw='nodemon current/index.js --watch content/themes/'
 alias gsub='git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`'
 alias gls='git log --stat'
@@ -44,6 +45,9 @@ alias artmm="php artisan make:migration"
 alias artmr="php artisan migrate:rollback"
 alias aptu="sudo apt-get update && sudo apt-get upgrade"
 
+# MySQL
+alias mye="mysql -uroot -p -e"
+
 # Services
 alias ngsr='sudo nginx -s stop && sudo nginx'
 alias ngdir="cd /usr/local/etc/nginx/"
@@ -56,6 +60,9 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop"
 alias my_start="brew services start mysql@5.7"
 alias my_stop="brew services stop mysql@5.7"
 
+# Apache Mac
+alias apares='sudo apachectl -k stop && sudo apachectl -k start'
+alias apak='sudo apachectl -k'
 
 # Helpful
 alias ccc='pwd | pbcopy'
@@ -87,6 +94,7 @@ alias disable_gate="sudo spctl --master-disable"
 
 # IP
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias ipp='dig +short myip.opendns.com @resolver1.opendns.com | pbcopy'
 
 # NPM
 alias nom='rm -rf node_modules/ && npm cache verify && npm install'
