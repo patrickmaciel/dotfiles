@@ -45,6 +45,17 @@ alias artmm="php artisan make:migration"
 alias artmr="php artisan migrate:rollback"
 alias aptu="sudo apt-get update && sudo apt-get upgrade"
 
+# Git flow
+alias gffs="git flow feature start"
+alias gffp="git flow feature publish"
+alias gfff="git flow feature finish"
+alias gfhs="git flow hotfix start"
+alias gfhf="git flow hotfix finish"
+alias gfrs="git flow release start"
+alias gffp="git flow release start"
+alias gfff="git flow release start"
+alias gfppp="git fetch --all && git checkout develop && git pull && git push origin develop"
+
 # MySQL
 alias mye="mysql -uroot -p -e"
 
@@ -61,8 +72,8 @@ alias my_start="brew services start mysql@5.7"
 alias my_stop="brew services stop mysql@5.7"
 
 # Apache Mac
-alias apares='sudo apachectl -k stop && sudo apachectl -k start'
-alias apak='sudo apachectl -k'
+alias apares='sudo apachectl stop && sudo apachectl start'
+alias apak='sudo apachectl'
 
 # Helpful
 alias ccc='pwd | pbcopy'
