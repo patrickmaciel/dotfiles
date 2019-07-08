@@ -1,13 +1,11 @@
+alias punit='vendor/bin/phpunit'
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-
+alias hhh='cd /c/Users/patri'
 alias ll="ls -l"
-#alias vi="nvim"
-#alias vim="nvim"
 alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
-alias nvinit="nvim ~/.config/nvim/init.vim"
-alias valias="vim ~/.bash_aliases"
-alias balias="vim ~/.bash_profile"
-alias zalias="source ~/.bash_profile"
+alias balias="vim ~/.bash_aliases"
+alias bfile="vim ~/.bash_profile"
+alias bsource="source ~/.bash_profile"
 alias gst="git status"
 alias gcm="git commit -m"
 alias gca="git commit -a"
@@ -16,7 +14,7 @@ alias guu='git update-index --assume-unchanged'
 alias gdff='git difftool'
 alias gdf='git diff'
 alias gdfi='git diff -E -z -b -w'
-alias gpu='git push'
+alias gpu='git pull && git push'
 alias gput='git push origin --tags'
 alias gpb='git push origin `git rev-parse --abbrev-ref HEAD`'
 alias gkm='git checkout master'
@@ -58,6 +56,7 @@ alias gfppp="git fetch --all && git checkout develop && git pull && git push ori
 
 # MySQL
 alias mye="mysql -uroot -p -e"
+alias myy="/c/Program\ Files/MySQL/MySQL\ Server\ 8.0/bin/mysql.exe -uroot -pjesus"
 
 # Services
 alias ngsr='sudo nginx -s stop && sudo nginx'
